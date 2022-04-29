@@ -9,7 +9,7 @@ def home():
 
 
 # Route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
+@application.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
@@ -21,4 +21,4 @@ def login():
 
 #run the server
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
