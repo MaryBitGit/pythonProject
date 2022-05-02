@@ -3,13 +3,13 @@ from flask import Flask, render_template, request, redirect, url_for
 application = Flask(__name__)
 
 
-@application.route('/')
+@application.route('/loginSuccess')
 def home():
     return "Login Successfully"
 
 
 # Route for handling the login page logic
-@application.route('/login', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
